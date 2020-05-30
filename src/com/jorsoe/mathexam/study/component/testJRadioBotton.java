@@ -6,7 +6,6 @@ import javax.swing.event.ChangeListener;
 import java.awt.*;
 
 /**
- * @version LeetCode 1.2.1
  * @auther Jorsoe
  * @date 2020/5/18 11:15
  */
@@ -21,14 +20,10 @@ public class testJRadioBotton {
 
         JPanel jPanel = new JPanel();
 
-        JRadioButton jRadioButtonMan = new JRadioButton();
-        jRadioButtonMan.setText("男");
-        jRadioButtonMan.setSelected(true);
+        JRadioButton jRadioButtonMan = new JRadioButton("男",true);
         System.out.println(jRadioButtonMan.isSelected());
 
-        JRadioButton jRadioButtonWoman = new JRadioButton();
-        jRadioButtonWoman.setText("女");
-        jRadioButtonWoman.setSelected(true);
+        JRadioButton jRadioButtonWoman = new JRadioButton("女",false);
         System.out.println(jRadioButtonWoman.isSelected());
 
         ChangeListener changeListener = new ChangeListener() {

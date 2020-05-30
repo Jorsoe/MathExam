@@ -25,16 +25,25 @@ public class testJBotton {
         jButton1.setEnabled(true);
         jPanel.add(jButton1);
 
+        JButton jButton2 = new JButton("Botton 2");
+        jButton1.setFont(new Font("楷体",Font.PLAIN,18));
+        jButton1.setForeground(Color.black);
+        jButton1.setEnabled(true);
+        jPanel.add(jButton2);
+
         ActionListener listener = new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 Object obj = e.getSource();
                 if (obj.equals(jButton1)){
                     System.out.println("监听按钮完毕！");
+                }else if ((obj.equals(jButton2))){
+                    System.out.println("hahaha");
                 }
             }
         };
         jButton1.addActionListener(listener);
+        jButton2.addActionListener(listener);
 
         jFrame.setContentPane(jPanel);
         jFrame.setVisible(true);
