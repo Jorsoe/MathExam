@@ -26,6 +26,10 @@ public class testJRadioBotton {
         JRadioButton jRadioButtonWoman = new JRadioButton("女",false);
         System.out.println(jRadioButtonWoman.isSelected());
 
+        ButtonGroup buttonGroupSex = new ButtonGroup();
+        buttonGroupSex.add(jRadioButtonMan);
+        buttonGroupSex.add(jRadioButtonWoman);
+
         ChangeListener changeListener = new ChangeListener() {
             @Override
             public void stateChanged(ChangeEvent e) {
