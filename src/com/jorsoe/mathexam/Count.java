@@ -2,7 +2,7 @@ package com.jorsoe.mathexam;
 
 /**
  * @auther Jorsoe
- * @date 2020/6/2 9:29
+ * @date 2020/5.15 4:02
  */
 
 import java.awt.BorderLayout;
