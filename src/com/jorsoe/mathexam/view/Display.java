@@ -65,7 +65,7 @@ public class Display extends JFrame {
         buttonPanel.setLayout(new FlowLayout());
         buttonPanel.setSize(600,50);
         buttonPanel.setBorder(BorderFactory.createLineBorder(Color.RED));
-        //buttonPanel.add(clearButton);
+       //buttonPanel.add(clearButton);
         countLable = new JLabel("                         ");
         countLable.setBorder(BorderFactory.createLineBorder(Color.BLACK));
         //将按钮添加至按钮及结果面板中
@@ -74,7 +74,7 @@ public class Display extends JFrame {
         buttonPanel.add(countLable);
         //设置窗体属性
         setLayout(new BorderLayout());
-        setBounds(100,100,400,600);
+        setBounds(100,100,600,600);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         Container container = getContentPane();
         //将计数面板,按钮面板放置在容器中指定位置
@@ -155,7 +155,7 @@ public class Display extends JFrame {
                 }
                 //计算用户做题的正确率
                 result = ((rightNum * 1.0)/(labelList.size())*100);
-                countLable.setText("Right:"+result+" / Error:"+(100-result));
+                countLable.setText(result + "%");
             }
         });
     }

@@ -31,14 +31,14 @@ public class Deal {
                 case 0:
                     arithmeticProblem.setOperator("+");
                     RandomRange(arithmeticProblem);//创建规定算数题范围函数,即和不大于100,差不小于0
-                    lable.setText(arithmeticProblem.getOperatedNumber()+arithmeticProblem.getOperator()+arithmeticProblem.getArithmeticNumber()+"=");
-                    lable.setBorder(BorderFactory.createLineBorder(Color.pink));
+                    lable.setText(arithmeticProblem.getOperatedNumber()+arithmeticProblem.getOperator()+arithmeticProblem.getArithmeticNumber());
+                    lable.setBorder(BorderFactory.createLineBorder(Color.PINK));
                     rightResultList.add(arithmeticProblem.getOperatedNumber()+arithmeticProblem.getArithmeticNumber());//list2为所有题目正确答案的集合
                     break;
                 default:
                     arithmeticProblem.setOperator("-");
                     RandomRange(arithmeticProblem);//创建规定算数题范围函数,即和不大于100,差不小于0
-                    lable.setText(arithmeticProblem.getOperatedNumber()+arithmeticProblem.getOperator()+arithmeticProblem.getArithmeticNumber()+"=");
+                    lable.setText(arithmeticProblem.getOperatedNumber()+arithmeticProblem.getOperator()+arithmeticProblem.getArithmeticNumber());
                     lable.setBorder(BorderFactory.createLineBorder(Color.GREEN));
                     rightResultList.add(arithmeticProblem.getOperatedNumber()-arithmeticProblem.getArithmeticNumber());//list2为所有题目正确答案的集合
                     break;
