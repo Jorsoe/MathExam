@@ -74,7 +74,7 @@ public class Display extends JFrame {
         buttonPanel.add(countLable);
         //设置窗体属性
         setLayout(new BorderLayout());
-        setBounds(100,100,600,600);
+        setBounds(100,100,400,600);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         Container container = getContentPane();
         //将计数面板,按钮面板放置在容器中指定位置
@@ -86,7 +86,7 @@ public class Display extends JFrame {
      * 设置CountPanel面板中的组件
      */
     public static void countLable(){
-        for(i=0;i<100;i++){
+        for(i=0;i<50;i++){
             JLabel label = new JLabel();
             //重点:在设置布局的条件下,调用setPreferredSize(new Dimension(80, 20))可以设置标签的大小
             //重点:而不能调用setsize()方法
@@ -97,7 +97,7 @@ public class Display extends JFrame {
             JTextField textField = new JTextField(4);
             textFieldList.add(textField);//list1为用户输入计算结果的文本框集合
         }
-        for(i = 0;i<200;i++){//利用if-else语句来间隔输出标签和文本框
+        for(i = 0;i<100;i++){//利用if-else语句来间隔输出标签和文本框
             if(i%2 == 0){//如果余数为0,则添加标签
                 countPanel.add(labelList.get(j));
                 j++;
@@ -155,7 +155,7 @@ public class Display extends JFrame {
                 }
                 //计算用户做题的正确率
                 result = ((rightNum * 1.0)/(labelList.size())*100);
-                countLable.setText(result + "%");
+                countLable.setText("Right:"+result+" / Error:"+(100-result));
             }
         });
     }
