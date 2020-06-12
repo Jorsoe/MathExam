@@ -1,9 +1,7 @@
 package com.jorsoe.mathexam.controller;
 
 import com.jorsoe.mathexam.view.Display;
-
 import javax.swing.*;
-
 import static com.jorsoe.mathexam.view.Display.countLable;
 
 /**

@@ -65,7 +65,7 @@ public class Display extends JFrame {
         buttonPanel.setLayout(new FlowLayout());
         buttonPanel.setSize(600,50);
         buttonPanel.setBorder(BorderFactory.createLineBorder(Color.RED));
-        buttonPanel.add(clearButton);
+        //buttonPanel.add(clearButton);
         countLable = new JLabel("                         ");
         countLable.setBorder(BorderFactory.createLineBorder(Color.BLACK));
         //将按钮添加至按钮及结果面板中
