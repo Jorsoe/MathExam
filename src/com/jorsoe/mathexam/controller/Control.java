@@ -11,6 +11,10 @@ import static com.jorsoe.mathexam.view.Display.countLable;
  * @date 2020/6/2 20:19
  */
 public class Control {
+    /**
+     * 设置窗体属性
+     * JFrame.EXIT_ON_CLOSE
+     */
     public static void frame(){
         Display display = new Display();
         display.setTitle("Renke@NB!");
