@@ -92,7 +92,7 @@ public class Display extends JFrame {
             //重点:而不能调用setsize()方法
             label.setPreferredSize(new Dimension(40, 20));
             label.setFont(new Font("楷体",Font.BOLD, 20));
-            label.setBorder(BorderFactory.createLineBorder(Color.black));//设置标签的边界
+            label.setBorder(BorderFactory.createLineBorder(Color.LIGHT_GRAY));//设置标签的边界
             labelList.add(label);//list为题目(标签)集合,题目在标签中呈现
             JTextField textField = new JTextField(4);
             textFieldList.add(textField);//list1为用户输入计算结果的文本框集合
@@ -107,7 +107,7 @@ public class Display extends JFrame {
             }
         }
         rightResultlist = Deal.createRandom(arithmeticProblem,labelList,rightResultlist);             //调用创建随机题目的方法CreateRandom();
-        allActionLIstener();        //调用按钮的动作监听方法myAddActionLIstener()
+        allActionLIstener();        //调用按钮的动作监听方法myAddActionListener()
     }
     /**
      * 为按钮添加动作监听方法
@@ -151,11 +151,18 @@ public class Display extends JFrame {
                 for(i = 0 ; i<userList.size() ; i++){
                     if(userList.get(i) == rightResultlist.get(i)){//所有题目正确答案的集合
                         rightNum ++;//用户计算正确的个数
+                        labelList.get(i).setOpaque(true);
+                        labelList.get(i).setBackground(Color.GREEN);
+                    }
+                    else {
+                        labelList.get(i).setOpaque(true);
+                        labelList.get(i).setBackground(Color.PINK);
                     }
                 }
                 //计算用户做题的正确率
                 result = ((rightNum * 1.0)/(labelList.size())*100);
                 countLable.setText(result + "%");
+                CreatePercentFrame.createGUI(result,labelList.size()-result);
             }
         });
     }
